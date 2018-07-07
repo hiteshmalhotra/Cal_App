@@ -1,0 +1,53 @@
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div ng-app="myApp" ng-controller="calculatorController" class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Edit Item Qty</h4>
+	  </div>
+	  <div class="modal-body">
+		<div class="form-group">
+		  <label>Name:</label>{{model.item.name}}
+		  <input type="number" id="qtyEntered" style="width: 200px;" ng-model="model.item.qty" min="0" max="999" onkeypress='validate(event)' class="form-control">
+		</div>
+	  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="doUpdate(model)" >Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$('#myModal').on('shown.bs.modal', function () {
+	  $('#qtyEntered').select();
+	});
+});
+</script>
+
+<script>
+function validate(evt) {
+  var len = document.getElementById('qtyEntered');
+  var theEvent = evt || window.event;  
+  var key = theEvent.keyCode || theEvent.which;
+  var keyString = String.fromCharCode( key );
+  
+  var regex = /[0-9]/;
+
+  if(len.value.length > 2 && key!=8){
+	theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }else if( !regex.test(keyString) ) {
+	if(key==8){
+		/*Backspace allowed*/
+	}else{
+		theEvent.returnValue = false;
+		if(theEvent.preventDefault) theEvent.preventDefault();
+	}
+  }
+}
+</script>
