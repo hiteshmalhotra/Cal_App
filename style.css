@@ -1,0 +1,100 @@
+.text-info {
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-left-color: blue;
+    padding: 5px 5px 5px 10px;
+    font-size: 110%;
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px silver;
+    padding: 10px;
+}
+
+.buttons {
+    padding: 20px;
+}
+
+.btn-marginTop {
+    margin-top: 5px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.btn-pos {
+    padding: 20px 31px;
+    font-size: 20px;
+    border-radius: 0px;
+    margin-right: 1px;
+}
+
+btn-summary {
+    margin-right: 5px;
+}
+
+btn-marginTop {
+    margin-top: 5px;
+}
+
+.badge-left {
+    float: none
+}
+
+.list-group-item>.badge {
+    float: none;
+}
+
+.button-default {
+    position: relative;
+    text-align: center;
+    padding: 16px;
+    background-color: #fafafa;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #cbcbcb;
+    margin: 15px 0;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-default.active {
+    background-color: #1684c5;
+    color: white;
+    box-shadow: inset 2px 2px 25px -5px rgba(0, 0, 0, 0.75);
+}
+
+.button-default>.button-badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 25px;
+    width: 25px;
+    z-index: 9;
+    background-color: #31b9b6;
+    color: #fff;
+    border-radius: 100%;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    background-color: #428aca;
+    border: 1px solid #428aca;
+    color: white;
+}
+
+.nav-tabs>li {
+    width: calc(100% / 3);
+    text-align: center;
+}
